@@ -85,6 +85,11 @@ Please contact `shibin@pathtracker.io` for any queries.
 # Contributing
 Please contact me if you like to contribute to the project.
 
+# Issues
+1. Error: ENOENT: no such file or directory, open 'output .....
+This error occurs when you the output folder is not created.
+
+
 # Improvements
 Some possible improvements
 * Support for all DynamoDB datatypes
