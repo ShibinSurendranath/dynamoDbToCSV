@@ -33,9 +33,7 @@ convertor.Convertor(s3Fetcher, config).getS3Data(function(err, s3Data){
     if(err)
         throw err;
     var rowData = s3Data.convertToTableData(config.filter).mergeAsRowData(config.delimiter);
-    csvWriter.writeFile(rowData, function(err, data){
-        if(err)
-            throw err;
+    csvWriter.writeFile(rowData, function(data){
         console.log("File written succesfully " + data);
     });
 }) 
