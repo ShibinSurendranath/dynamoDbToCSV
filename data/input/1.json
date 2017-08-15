@@ -1,0 +1,51 @@
+{
+    "tenantId": {
+        "S": "test1"
+    },
+    "email": {
+        "S": "xxx@test1.com"
+    },
+    "name": {
+        "S": "Test Account 1"
+    },
+    "clientId": {
+        "S": "na"
+    },
+    "timeinmillis": {
+        "N": "1492146069443"
+    },
+    "zoom": {
+        "N": "18"
+    },
+    "maxCapacity": {
+        "N": "15"
+    },
+    "checkArea": {
+        "N": "0"
+    },
+    "settingsId": {
+        "S": "52bf024f-f3ad-42d7-85c0-1a2a6732a623"
+    },
+    "longitude": {
+        "N": "77.43568137790980"
+    },
+    "clientSecret": {
+        "S": "na"
+    },
+    "adminPhoneNo": {
+        "S": "1234567890"
+    },
+    "latitude": {
+        "N": "12.960942098646457"
+    },
+    "additional":{
+        "M":{
+            "Subscription ID":{
+                "S":"83005"
+            },
+            "Open_tickets":{
+                "S":"0"
+            }
+        }
+    }
+}

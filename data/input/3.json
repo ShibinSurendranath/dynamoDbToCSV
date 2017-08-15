@@ -1,0 +1,120 @@
+{
+    "configData": {
+        "M": {
+            "subareas": {
+                "L": [
+                    {
+                        "M": {
+                            "areaName": {
+                                "S": "XYZ"
+                            },
+                            "latitude": {
+                                "N": "12.0"
+                            },
+                            "longitude": {
+                                "N": "76.0"
+                            }
+                        }
+                    },
+                    {
+                        "M": {
+                            "areaName": {
+                                "S": "ABC"
+                            },
+                            "latitude": {
+                                "N": "11.0"
+                            },
+                            "longitude": {
+                                "N": "77.0"
+                            }
+                        }
+                    }
+                ]
+            },
+            "salesAccount": {
+                "N": "0"
+            },
+            "singleStatus": {
+                "N": "0"
+            },
+            "daysAdvance": {
+                "N": "14"
+            },
+            "quantityAllowed": {
+                "N": "0"
+            },
+            "showEmail": {
+                "N": "0"
+            },
+            "customFields": {
+                "L": [
+                    {
+                        "S": "Service Advisor"
+                    },
+                    {
+                        "S": "Remarks"
+                    }
+                ]
+            },
+            "tenantId": {
+                "S": "test3"
+            },
+            "payment": {
+                "N": "0"
+            },
+            "serviceItems": {
+                "L": [
+                    {
+                        "S": "SUV"
+                    },
+                    {
+                        "S": "MUV"
+                    }
+                ]
+            }
+        }
+    },
+    "zoom": {
+        "N": "12"
+    },
+    "maxCapacity": {
+        "N": "15"
+    },
+    "checkArea": {
+        "N": "0"
+    },
+    "settingsId": {
+        "S": "a4f4e937-43da-42dc-a26d-8c9c5db0ac5d"
+    },
+    "longitude": {
+        "N": "75.64101922512056"
+    },
+    "tenantId": {
+        "S": "test3"
+    },
+    "adminPhoneNo": {
+        "S": "1188899"
+    },
+    "email": {
+        "S": "abc@test3.com"
+    },
+    "latitude": {
+        "N": "12.514085729836673"
+    },
+    "name": {
+        "S": "Test Account 3"
+    },
+    "timeinmillis": {
+        "N": "1472821808045"
+    },
+    "additional":{
+        "M":{
+            "Subscription ID":{
+                "S":"83009"
+            },
+            "Open_tickets":{
+                "S":"4"
+            }
+        }
+    }
+}
