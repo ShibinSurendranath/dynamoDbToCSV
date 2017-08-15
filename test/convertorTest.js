@@ -22,6 +22,10 @@ s3FetcherInject.listObjects = function(s3Config){
 }
 s3FetcherInject.getObject = function(bucket, key){
     var deferred = new Deferred();
+    if(key.indexOf('.json') == -1){
+         deferred.resolve('');
+         return;
+    }
     fs.readFile(bucket + "/" + s3FetcherInject.s3Config.Prefix + "/" + key, function(err, data){
         if(err){
             deferred.reject(err);

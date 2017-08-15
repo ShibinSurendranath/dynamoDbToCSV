@@ -10,7 +10,7 @@ For data backup to S3 you could use [dynamodb-backup-restore](https://www.npmjs.
 # Installation
 You need to jave [nodejs](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) to use the program. You can use 
 [git](https://git-scm.com/) to clone the repository.
-* `git clone` 
+* `git clone https://github.com/ShibinSurendranath/dynamoDbToCSV.git` 
 
 To start please do
 * `npm install`
@@ -23,7 +23,8 @@ The output is written to `output` folder. You need to have permission to write f
 
 You need to make relevant configuration changes to run the program in `config.js`.
 
-The data is flattened out in the CSV file. So if you have a `JSON` with nested attribute `inner` inside `outer` attribute, you would see the field mapping in CSV file as `outer.inner`
+The Mapped data is flattened out in the CSV file. So if you have a `JSON` with nested attribute `inner` inside `outer` attribute, you would see the field mapping in CSV file as `outer.inner`.
+List data is not flatted and written in `JSON` format (including any nested data).
 
 Alternatively you can pass following command line arguments in order (keys corresponding to `config.js` also given)
 1. AWS access key to access S3
@@ -44,6 +45,9 @@ Alternatively you can pass following command line arguments in order (keys corre
     * `config.fileNamePrefix`
 
 If you need to skip an argument please provide a value `X`. You could also choose to not give any arguments
+
+## Sample Data
+Please see some sample `JSON` in folder `data/input`. For sample CSV file refer `sample.csv` 
 
 # Testing
 Unit tests are written using mocha. You can run by command

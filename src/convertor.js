@@ -46,6 +46,8 @@ convertor.S3Data = function(s3Data){
     convertToTableData = function(filter){
         var filteredArray = [];
         for(var data of s3Data){
+            if(data == null || data === '')
+                continue;
             var obj = JSON.parse(data);
             if(filter && filter.key && filter.value){
                 var filterValue = obj[filter.key];
@@ -71,6 +73,8 @@ convertor.S3Data = function(s3Data){
      * Add a field if not already added
      */
     addField = function(key, value){
+        if(key == null)
+            return;
         tableData[tableData.length -1][key] = value;
         if(fields.indexOf(key) == -1)
             fields.push(key);
@@ -98,17 +102,19 @@ convertor.S3Data = function(s3Data){
                 case 'L' : {
                     var lArray = [];
                     for(var lValue of dynamodbJson[key]){
-                        lArray.push(prefixKey, parseDynamoDbJson(lValue));
+                        lArray.push(parseDynamoDbJson(null, lValue));
                     }
-                    addField(prefixKey, lArray);
-                    return lArray;
+                    var arrayAsStr = JSON.stringify(lArray);
+                    arrayAsStr = arrayAsStr.replace(/"/g, "'");
+                    addField(prefixKey, '"' + arrayAsStr+ '"');
+                    return arrayAsStr;
                 }
                 case 'M' : {
                     return parseDynamoDbJson(prefixKey, dynamodbJson[key]);
                 }
                 default : {
                     var newKey = key;
-                    if(prefixKey != "")
+                    if(prefixKey && prefixKey != "")
                         newKey = prefixKey + "." + key;
                     basicJson[key] = parseDynamoDbJson(newKey, dynamodbJson[key]);
                 }
